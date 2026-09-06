@@ -1,3 +1,6 @@
+import numpy as np
+
+
 def get_vec():
     user_input = input("vector elements? ")
     elements = user_input.split()
@@ -10,7 +13,7 @@ def get_vec():
 
 
 def get_mat():
-    rows = int(input("number of rows of matrix: "))
+    rows = int(input("matrix rows count: "))
 
     matrix = []
     for i in range(rows):
@@ -24,3 +27,8 @@ def get_mat():
         matrix.append(current_row)
 
     return matrix
+
+def dot_pro(A, v):
+    mat = np.array(A)
+    vec = np.array(v)
+    return mat @ vec
